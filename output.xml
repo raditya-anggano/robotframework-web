@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211212 23:57:37.840" rpa="false" schemaversion="2">
+<suite id="s1" name="webRobot" source="E:\Raditya Anggano\Workspace\robotframework-web\webRobot.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${WebURL}</arg>
+<arg>${BROWSERS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211212 23:57:38.086" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20211212 23:57:38.086" endtime="20211212 23:57:41.228"/>
+</kw>
+<test id="s1-t1" name="login with valid credentials">
+<kw name="I want to login with valid credentials">
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211212 23:57:41.232" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20211212 23:57:41.232" endtime="20211212 23:57:41.326"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211212 23:57:41.326" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20211212 23:57:41.326" endtime="20211212 23:57:41.406"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211212 23:57:41.406" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20211212 23:57:41.406" endtime="20211212 23:57:41.505"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211212 23:57:41.659" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211212 23:57:41.506" endtime="20211212 23:57:41.659"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Products</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211212 23:57:41.673" level="INFO">Current page contains text 'Products'.</msg>
+<status status="PASS" starttime="20211212 23:57:41.660" endtime="20211212 23:57:41.674"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=add-to-cart-sauce-labs-backpack</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211212 23:57:41.674" level="INFO">Clicking element 'id=add-to-cart-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20211212 23:57:41.674" endtime="20211212 23:57:41.716"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211212 23:57:41.857" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211212 23:57:41.716" endtime="20211212 23:57:41.857"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//body/div[@id='root']/div[@id='page_wrapper']/div[@id='contents_wrapper']/div[@id='header_container']/div[1]/div[3]/a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211212 23:57:41.858" level="INFO">Clicking element '//body/div[@id='root']/div[@id='page_wrapper']/div[@id='contents_wrapper']/div[@id='header_container']/div[1]/div[3]/a[1]'.</msg>
+<status status="PASS" starttime="20211212 23:57:41.857" endtime="20211212 23:57:41.902"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211212 23:57:42.024" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211212 23:57:41.902" endtime="20211212 23:57:42.024"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211212 23:57:43.033" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211212 23:57:42.024" endtime="20211212 23:57:43.033"/>
+</kw>
+<status status="PASS" starttime="20211212 23:57:41.230" endtime="20211212 23:57:43.033"/>
+</kw>
+<status status="PASS" starttime="20211212 23:57:41.229" endtime="20211212 23:57:43.034"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211212 23:57:43.036" endtime="20211212 23:57:45.215"/>
+</kw>
+<status status="PASS" starttime="20211212 23:57:37.842" endtime="20211212 23:57:45.215"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="webRobot">webRobot</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
